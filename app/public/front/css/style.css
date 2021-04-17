@@ -19,11 +19,12 @@
 
 /*
         +++++++++++++++++++++++++++++++++++++++
-            MEDIAQUERY POUR MOBILE < 370 PX
+            MEDIAQUERY POUR MOBILE < 369 PX
         +++++++++++++++++++++++++++++++++++++++
 */
 
-body{
+.main-content{
+    max-width: 369px;
     width: 100%;
     font-family: 'Roboto-light';    
 }
@@ -113,8 +114,7 @@ TEMPLATE
 .log-container .power-off{
     margin-left: 10px;
     color: #e4e4e4;
-    font-size: 1.3rem;
-    
+    font-size: 1.3rem;    
 }
 .nav-container{   
     margin-top: 15px;   
@@ -123,8 +123,7 @@ TEMPLATE
 #burger i{    
     color: #e4e4e4;
     cursor: pointer;
-    font-size: 1.6rem; 
-   
+    font-size: 1.6rem;   
 } 
 #list-menu{
     display: none;    
@@ -148,12 +147,25 @@ TEMPLATE
     text-decoration: none;   
     font-weight: bold;
 }
+
         /* ------------
             Main
         -------------*/
-
+/* 
 .main-content{
-    width: 100%;          
+    width: 100%;           
+} */
+
+     /* ------------
+            Footer
+        -------------*/
+
+footer{    
+    padding-top: 30px;    
+    background-color: #2a4e62;
+    color: #eeedff;
+    text-align: center;
+    height: 70px;
 }
 
 /*
@@ -181,30 +193,29 @@ ACCUEIL
 }
 .welcome-title{
     position: relative;
-    top: -60px;
-    margin: 0 20px 40px;
+    top: -40px;
+    margin: 0 20px 0;
     color: #2a4e62;
     font-family: 'Believe-it';
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;    
 }
-.intro-container{        
-    padding: 30px 0 30px;
-    position: relative;
-    top: -110px;
+.intro-container{    
+    margin-bottom: 50px;
 }
-.articles-block{
+.articles-block{   
     display: flex;
     flex-direction: column;
     align-items: center;    
-    margin-bottom: 40px;   
+    margin: 30px 0 40px;  
 }
 .article-img{   
     position: relative;
     overflow: hidden;
     width: 80%;
-    height: 150px;
-    margin-bottom: 10px;      
+    height: 200px;
+    margin-bottom: 10px;
+    text-align: left;        
 }
 .article-img img{
     position: absolute;
@@ -214,7 +225,7 @@ ACCUEIL
 }
 .article-text{ 
     width: 90%;
-    font-size: 0.8rem;    
+    font-size: 0.8rem;     
 }
 .article-text h3{  
     padding: 20px 0 10px;  
@@ -224,11 +235,10 @@ ACCUEIL
 }
 .article-text p{
     text-align: justify;
+    margin-bottom: 10px;
 }                           
-.split-block{        
-    position: relative;
-    top: -130px;
-    padding: 20px 0;
+.split-block{      
+    padding: 30px 0;
     background-image: url("/app/public/front/images/white-flowers.jpg");
     background-position: center;
     background-size: cover;   
@@ -254,15 +264,6 @@ ACCUEIL
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-}
-
-footer{
-    padding-top: 30px;
-    margin-top: 30px;
-    background-color: #2a4e62;
-    color: #eeedff;
-    text-align: center;
-    height: 70px;
 }
 
 /*
@@ -561,7 +562,24 @@ COMMENTEDITED
     color: #b1bac7;
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 370px) and (max-width: 767px){
+
+.main-content{
+    min-width: 370px;
+    max-width: 768px;
+    width: 100%;
+}
+.principal-title{
+    font-size: 3rem;
+}
+}
+
+@media screen and (min-width: 1400px){
+
+.main-content{
+    min-width: 1200px;
+    width: 100%;
+}
 .article-img{   
     position: relative;
     overflow: hidden;

@@ -52,11 +52,12 @@
     <?php foreach($lastArticles as $lastArticle): ?>   
         <article class="articles-block">
             <div class="article-img">
-                <img src="<?= $lastArticle['img'] ?>" alt="<?= $lastArticle['titleImg'] ?>">                
+                <img src="<?= $lastArticle['img'] ?>" alt="<?= $lastArticle['titleImg'] ?>">                 
             </div>
-            <p class="date-edit">Publié le <?= htmlspecialchars($lastArticle['dateEdit']) ?></p>
+            
             <div class="article-text">
                 <h3><?= htmlspecialchars($lastArticle['title']) ?></h3>
+                <p class="date-edit">Publié le <?= htmlspecialchars($lastArticle['dateEdit']) ?></p>
                 <p><?= htmlspecialchars($lastArticle['content']) ?></p>
             </div>
             <a class="link-article" href="index.php?action=readNext&id=<?= $lastArticle['art_id'] ?>">Lire l'article</a>                         
